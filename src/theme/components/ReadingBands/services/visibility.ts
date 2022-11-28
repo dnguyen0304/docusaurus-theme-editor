@@ -105,12 +105,12 @@ import styles from './styles.module.css';
 //     return threshold.map(chunk => chunk / height);
 // }
 
-type Props = {
-    readonly element: string | Element;
-    readonly onChange: IntersectionObserverCallback;
-    readonly debugBorderIsEnabled?: boolean;
-    readonly targetId?: string;
-} & IntersectionObserverInit;
+type Props = Readonly<{
+    element: string | Element;
+    onChange: IntersectionObserverCallback;
+    debugBorderIsEnabled?: boolean;
+    targetId?: string;
+}> & IntersectionObserverInit;
 
 export async function observeVisibility(
     {
