@@ -1,7 +1,6 @@
 // If you need the DocItem-specific ("page-specific") root, use
 // theme/DocItem/Layout.
 
-import BrowserOnly from '@docusaurus/BrowserOnly';
 import * as React from 'react';
 import Cookies, { CookieSetOptions } from 'universal-cookie';
 import URI from 'urijs';
@@ -11,7 +10,6 @@ import {
     SEARCH_PARAM_KEY_LOGGED_IN_AT
 } from '../../../constants';
 import { useSnackbar } from '../../../contexts/snackbar';
-import ReadingBands from '../ReadingBands';
 
 const WELCOME_WINDOW_SECONDS: number = 10;
 
@@ -36,7 +34,7 @@ function setCookieWithFallback(
     cookies.set(name, value, options);
 };
 
-export default function App(): JSX.Element {
+export default function App(): JSX.Element | null {
     const { snackbar } = useSnackbar();
 
     // TODO(dnguyen0304): Add a callback landing page ("Please wait while you
@@ -81,9 +79,5 @@ export default function App(): JSX.Element {
         };
     }, []);
 
-    return (
-        <BrowserOnly>
-            {() => <ReadingBands />}
-        </BrowserOnly>
-    );
+    return null;
 }
