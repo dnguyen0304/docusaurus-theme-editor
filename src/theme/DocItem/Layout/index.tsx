@@ -40,9 +40,9 @@ export default function LayoutWrapper(props: Props): JSX.Element {
             // TODO(dnguyen0304): Investigate if the empty string fallback is
             // necessary.
             addTab({
-                pullTitle: pullTitle ? pullTitle : '',
-                pullUrl: pullUrl ? pullUrl : '',
-                pullBranchName: pullBranchName ? pullBranchName : '',
+                pullTitle: pullTitle ?? '',
+                pullUrl: pullUrl ?? '',
+                pullBranchName: pullBranchName ?? '',
             });
         }
     }, []);
