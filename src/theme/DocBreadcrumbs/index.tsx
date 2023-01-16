@@ -3,7 +3,7 @@ import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import DocBreadcrumbs from '@theme-init/DocBreadcrumbs';
 import type DocBreadcrumbsType from '@theme/DocBreadcrumbs';
-import React from 'react';
+import * as React from 'react';
 import { useEditor } from '../../contexts/editor';
 import { useRawContent } from '../../contexts/rawContent';
 import { useLocation } from '../../contexts/router';
@@ -13,32 +13,30 @@ import styles from './styles.module.css';
 
 type Props = WrapperProps<typeof DocBreadcrumbsType>;
 
-export default function DocBreadcrumbsWrapper(props: Props): JSX.Element {
-    const {
-        editorIsOpen,
-        setEditorIsOpen,
-    } = useEditor();
-    const { rawContent } = useRawContent();
+const Button = (): JSX.Element | null => {
+    const { editorIsOpen, setEditorIsOpen } = useEditor();
     const { currentPath } = useLocation();
-    const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.up('mobile'));
+    const { rawContent } = useRawContent();
 
     const toggleEditorIsOpen = () => setEditorIsOpen(prev => !prev);
 
-    const getButton = (): JSX.Element | null => {
-        if (currentPath in rawContent == false) {
-            return null;
-        }
-        if (!editorIsOpen) {
-            return <EditButton onClick={toggleEditorIsOpen} />;
-        }
-        return <CloseButton toggleEditorIsOpen={toggleEditorIsOpen} />;
+    if (currentPath in rawContent === false) {
+        return null;
     }
+    if (!editorIsOpen) {
+        return <EditButton onClick={toggleEditorIsOpen} />;
+    }
+    return <CloseButton toggleEditorIsOpen={toggleEditorIsOpen} />;
+};
+
+export default function DocBreadcrumbsWrapper(props: Props): JSX.Element {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.up('mobile'));
 
     return (
         <nav className={`${styles.breadcrumbsWrapper_container}`}>
             <DocBreadcrumbs {...props} />
-            {isMobile && getButton()}
+            {isMobile && <Button />}
         </nav>
     );
-}
+};
