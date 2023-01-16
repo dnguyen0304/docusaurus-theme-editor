@@ -16,7 +16,7 @@ export interface ContextValue {
 
 const Context = React.createContext<ContextValue | undefined>(undefined);
 
-function useContextValue(): ContextValue {
+const useContextValue = (): ContextValue => {
     const [user, setUser] = React.useState<GithubUser>();
     const [api, setApi] = React.useState<RestEndpointMethods>();
     const {
@@ -39,13 +39,13 @@ function useContextValue(): ContextValue {
             authorizationRedirectUrl,
         ],
     );
-}
+};
 
 interface Props {
     readonly children: React.ReactNode;
 };
 
-export function GithubProvider({ children }: Props): JSX.Element {
+export const GithubProvider = ({ children }: Props): JSX.Element => {
     const value = useContextValue();
 
     return (
@@ -55,10 +55,10 @@ export function GithubProvider({ children }: Props): JSX.Element {
     );
 };
 
-export function useGithub(): ContextValue {
+export const useGithub = (): ContextValue => {
     const context = React.useContext(Context);
     if (context === undefined) {
         throw new ReactContextError('GithubProvider');
     }
     return context;
-}
+};
