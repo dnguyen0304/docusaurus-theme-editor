@@ -12,7 +12,7 @@ const DEFAULT_THEME_CONFIG = {
 // TODO(dnguyen0304): Investigate missing labels.
 // TODO(dnguyen0304): Fix incorrect ThemeConfig type.
 export const ThemeConfigSchema = Joi.object<ThemeConfig>({
-    editor: Joi.object({
+    docupotamusEditor: Joi.object({
         githubAuthorizationRedirectUrl: Joi
             .string()
             .default(DEFAULT_THEME_CONFIG.githubAuthorizationRedirectUrl),

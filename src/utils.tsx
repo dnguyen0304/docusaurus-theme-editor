@@ -10,7 +10,7 @@ export const useEditorThemeConfig = (): EditorThemeConfig => {
         useDocusaurusContext()
             .siteConfig
             .themeConfig
-            .editor
+            .docupotamusEditor
     ) as EditorThemeConfig;
 };
 
