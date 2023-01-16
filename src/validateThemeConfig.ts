@@ -4,7 +4,7 @@ import type {
 } from '@docusaurus/types';
 import { Joi } from '@docusaurus/utils-validation';
 
-export const DEFAULT_THEME_CONFIG = {
+const DEFAULT_THEME_CONFIG = {
     githubAuthorizationRedirectUrl: 'https://kgevadn5a2.execute-api.us-east-1.amazonaws.com/production/DocusaurusEditor_handleOAuthRedirect',
 };
 
