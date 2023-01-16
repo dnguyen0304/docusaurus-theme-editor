@@ -3,8 +3,8 @@ import { ReactContextError } from './errors';
 
 // TODO(dnguyen0304): Import from docusaurus-plugin-editor.
 interface RawContent {
-    [key: string]: string;
-}
+    readonly [key: string]: string;
+};
 
 interface ContextValue {
     readonly rawContent: RawContent;
