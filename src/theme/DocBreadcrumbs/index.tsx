@@ -1,5 +1,4 @@
 import type { WrapperProps } from '@docusaurus/types';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import DocBreadcrumbs from '@theme-init/DocBreadcrumbs';
@@ -15,11 +14,6 @@ import styles from './styles.module.css';
 type Props = WrapperProps<typeof DocBreadcrumbsType>;
 
 export default function DocBreadcrumbsWrapper(props: Props): JSX.Element {
-    const {
-        siteConfig: {
-            trailingSlash,
-        },
-    } = useDocusaurusContext();
     const {
         editorIsOpen,
         setEditorIsOpen,
