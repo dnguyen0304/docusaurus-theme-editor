@@ -23,7 +23,7 @@ export default function DocBreadcrumbsWrapper(props: Props): JSX.Element {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.up('mobile'));
 
-    const toggleEditorIsOpen = () => { setEditorIsOpen(prev => !prev) };
+    const toggleEditorIsOpen = () => setEditorIsOpen(prev => !prev);
 
     const getButton = (): JSX.Element | null => {
         if (currentPath in rawContent == false) {
