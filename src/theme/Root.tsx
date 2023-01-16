@@ -7,6 +7,17 @@ import App from '../theme/components/App';
 import Snackbar from '../theme/services/Snackbar';
 import './styles.css';
 
+declare module '@mui/material/styles' {
+    interface BreakpointOverrides {
+        xs: false;
+        sm: false;
+        md: false;
+        lg: false;
+        xl: false;
+        mobile: true;
+    }
+};
+
 type Props = {
     readonly children: React.ReactNode;
 }
