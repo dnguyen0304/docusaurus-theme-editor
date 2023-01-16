@@ -21,7 +21,7 @@ export default function DocBreadcrumbsWrapper(props: Props): JSX.Element {
     const { rawContent } = useRawContent();
     const { currentPath } = useLocation();
     const theme = useTheme();
-    const matches = useMediaQuery(theme.breakpoints.up('mobile'));
+    const isMobile = useMediaQuery(theme.breakpoints.up('mobile'));
 
     const toggleEditorIsOpen = () => { setEditorIsOpen(prev => !prev) };
 
@@ -38,7 +38,7 @@ export default function DocBreadcrumbsWrapper(props: Props): JSX.Element {
     return (
         <nav className={`${styles.breadcrumbsWrapper_container}`}>
             <DocBreadcrumbs {...props} />
-            {matches && getButton()}
+            {isMobile && getButton()}
         </nav>
     );
 }
