@@ -1,9 +1,9 @@
 import type { LOCAL_STORAGE_KEYS } from './docusaurus-theme-editor';
 
-// See https://github.com/facebook/docusaurus/blob/01ac2e0fcaccaf469992f93a0e8bf04e61cf850e/packages/docusaurus-utils/src/pathUtils.ts#L93
+// See: https://github.com/facebook/docusaurus/blob/01ac2e0fcaccaf469992f93a0e8bf04e61cf850e/packages/docusaurus-utils/src/pathUtils.ts#L93
 export const DOCUSAURUS_ALIASED_SITE_PATH_PREFIX: string = '@site';
 
-// Keep in sync:
+// TODO(dnguyen0304): Document how to keep in sync.
 // GitHub > Developer Settings > OAuth Apps > "Authorization callback URL"
 export const SEARCH_PARAM_KEY_AUTH: string = 'auth';
 export const SEARCH_PARAM_KEY_LOGGED_IN_AT: string = 'logged_in_at';
