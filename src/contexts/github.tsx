@@ -41,7 +41,7 @@ function useContextValue(): ContextValue {
     );
 }
 
-type Props = {
+interface Props {
     readonly children: React.ReactNode;
 };
 
