@@ -1,7 +1,7 @@
 {
     "name": "docusaurus-theme-editor-lambdas",
     "version": "0.0.1",
-    "description": "Docusaurus live editor AWS lambda functions.",
+    "description": "Docusaurus editor AWS lambda functions.",
     "devDependencies": {
         "aws-sdk": "^2.1189.0"
     },
