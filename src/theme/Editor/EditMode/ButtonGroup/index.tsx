@@ -1,7 +1,7 @@
+import type { GithubPullStatus } from '@docusaurus/theme-editor';
 import Stack from '@mui/material/Stack';
 import draft from 'draft-js';
 import * as React from 'react';
-import type { GithubPullStatus } from '../../../../docusaurus-theme-editor';
 import DiscardButton from './DiscardButton';
 import ProposeButton from './ProposeButton';
 import SaveButton from './SaveButton';

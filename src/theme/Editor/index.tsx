@@ -1,3 +1,4 @@
+import { GithubPullStatus } from '@docusaurus/theme-editor';
 import styled from '@emotion/styled';
 import MergeIcon from '@mui/icons-material/Merge';
 import ReportOutlinedIcon from '@mui/icons-material/ReportOutlined';
@@ -8,7 +9,6 @@ import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import * as React from 'react';
 import { useEditor } from '../../contexts/editor';
-import { GithubPullStatus } from '../../docusaurus-theme-editor';
 import EditorContainer from './Container';
 import EditorTab from './Tab';
 import EditorTooltip from './Tooltip';

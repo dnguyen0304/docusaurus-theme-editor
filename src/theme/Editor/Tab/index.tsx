@@ -1,3 +1,4 @@
+import { GithubPullStatus } from '@docusaurus/theme-editor';
 import type { DraftHandleValue, EditorState } from 'draft-js';
 import draft, { convertToRaw } from 'draft-js';
 import * as React from 'react';
@@ -7,7 +8,6 @@ import { useRawContent } from '../../../contexts/rawContent';
 import { useLocation } from '../../../contexts/router';
 import { useSite } from '../../../contexts/site';
 import { useSnackbar } from '../../../contexts/snackbar';
-import { GithubPullStatus } from '../../../docusaurus-theme-editor';
 import { getLocalStorageKey } from '../../../utils';
 import EditModeButtonGroup from '../EditMode/ButtonGroup';
 import EditorLine from '../Line';

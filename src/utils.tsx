@@ -1,9 +1,9 @@
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import { ContextValue } from './contexts/site';
 import type {
     EditorThemeConfig,
     LOCAL_STORAGE_KEYS
-} from './docusaurus-theme-editor';
+} from '@docusaurus/theme-editor';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { ContextValue } from './contexts/site';
 
 export const useEditorThemeConfig = (): EditorThemeConfig => {
     return (

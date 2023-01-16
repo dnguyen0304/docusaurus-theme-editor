@@ -1,8 +1,8 @@
+import type { GithubUser } from '@docusaurus/theme-editor';
 import type {
     RestEndpointMethods
 } from '@octokit/plugin-rest-endpoint-methods/dist-types/generated/method-types';
 import * as React from 'react';
-import type { GithubUser } from '../docusaurus-theme-editor';
 import { useEditorThemeConfig } from '../utils';
 import { ReactContextError } from './errors';
 

@@ -1,3 +1,4 @@
+import { InternalGithubState } from '@docusaurus/theme-editor';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
@@ -8,7 +9,6 @@ import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import MuiTooltip, { tooltipClasses, TooltipProps } from '@mui/material/Tooltip';
 import * as React from 'react';
-import { InternalGithubState } from '../../../docusaurus-theme-editor';
 import { KeyBinding } from '../EditMode/ButtonGroup/DiscardButton';
 
 interface Props extends Omit<TooltipProps, 'title'> {

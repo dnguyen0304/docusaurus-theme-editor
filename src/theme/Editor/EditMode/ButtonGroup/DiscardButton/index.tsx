@@ -1,3 +1,4 @@
+import type { KeyBinding as KeyBindingType } from '@docusaurus/theme-editor';
 import DeleteOutlineRoundedIcon from '@mui/icons-material/DeleteOutlineRounded';
 import Button from '@mui/material/Button';
 import DialogActions from '@mui/material/DialogActions';
@@ -8,7 +9,6 @@ import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import * as React from 'react';
 import { useHotkeys } from 'react-hotkeys-hook';
-import type { KeyBinding as KeyBindingType } from '../../../../../docusaurus-theme-editor';
 import Transition from '../../../../components/Transition';
 import StyledDialog from '../Dialog';
 import SplitButton from './SplitButton';

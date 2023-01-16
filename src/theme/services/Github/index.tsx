@@ -1,3 +1,8 @@
+import type {
+    GithubPullStatus,
+    GithubUser,
+    InternalGithubState
+} from '@docusaurus/theme-editor';
 import { Octokit } from '@octokit/core';
 import { restEndpointMethods } from '@octokit/plugin-rest-endpoint-methods';
 import type { RestEndpointMethods } from '@octokit/plugin-rest-endpoint-methods/dist-types/generated/method-types';
@@ -8,11 +13,6 @@ import URI from 'urijs';
 import { COOKIE_KEY_SESSION_ID } from '../../../constants';
 import type { ContextValue as GithubContextValue } from '../../../contexts/github';
 import type { ContextValue as SiteContextValue } from '../../../contexts/site';
-import type {
-    GithubPullStatus,
-    GithubUser,
-    InternalGithubState
-} from '../../../docusaurus-theme-editor';
 
 interface AuthenticateType {
     user: GithubUser;

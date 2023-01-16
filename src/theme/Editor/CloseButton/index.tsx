@@ -1,10 +1,10 @@
+import type { KeyBinding } from '@docusaurus/theme-editor';
 import CloseIcon from '@mui/icons-material/Close';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 import Tooltip from '@mui/material/Tooltip';
 import * as React from 'react';
 import { useHotkeys } from 'react-hotkeys-hook';
-import type { KeyBinding } from '../../../docusaurus-theme-editor';
 
 interface Props {
     readonly toggleEditorIsOpen: () => void;

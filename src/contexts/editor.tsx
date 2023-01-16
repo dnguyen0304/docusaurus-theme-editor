@@ -1,13 +1,13 @@
+import {
+    GithubPullStatus,
+    LOCAL_STORAGE_KEYS
+} from '@docusaurus/theme-editor';
 import * as React from 'react';
 import {
     LOCAL_STORAGE_KEY_PULL_BRANCH_NAME,
     LOCAL_STORAGE_KEY_PULL_TITLE,
     LOCAL_STORAGE_KEY_PULL_URL
 } from '../constants';
-import {
-    GithubPullStatus,
-    LOCAL_STORAGE_KEYS
-} from '../docusaurus-theme-editor';
 import { getLocalStorageKey } from '../utils';
 import { ReactContextError } from './errors';
 import { ContextValue as SiteContextValue } from './site';

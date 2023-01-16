@@ -1,3 +1,7 @@
+import type {
+    GithubPullStatus,
+    KeyBinding as KeyBindingType
+} from '@docusaurus/theme-editor';
 import CloudUploadOutlinedIcon from '@mui/icons-material/CloudUploadOutlined';
 import SendIcon from '@mui/icons-material/Send';
 import Button from '@mui/material/Button';
@@ -17,10 +21,6 @@ import { useEditor } from '../../../../../contexts/editor';
 import { useGithub } from '../../../../../contexts/github';
 import { useSite } from '../../../../../contexts/site';
 import { useSnackbar } from '../../../../../contexts/snackbar';
-import type {
-    GithubPullStatus,
-    KeyBinding as KeyBindingType
-} from '../../../../../docusaurus-theme-editor';
 import Transition from '../../../../components/Transition';
 import { initializeAuth } from '../../../../services/Github';
 import BaseStyledDialog from '../Dialog';

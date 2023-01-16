@@ -1,3 +1,7 @@
+import type {
+    GithubPullStatus,
+    KeyBinding as KeyBindingType
+} from '@docusaurus/theme-editor';
 import DoneIcon from '@mui/icons-material/Done';
 import SaveOutlinedIcon from '@mui/icons-material/SaveOutlined';
 import CircularProgress from '@mui/material/CircularProgress';
@@ -7,10 +11,6 @@ import draft from 'draft-js';
 import * as React from 'react';
 import { useHotkeys } from 'react-hotkeys-hook';
 import { useSnackbar } from '../../../../../contexts/snackbar';
-import type {
-    GithubPullStatus,
-    KeyBinding as KeyBindingType
-} from '../../../../../docusaurus-theme-editor';
 
 const TOOLTIP_DISABLED_TEXT: string =
     `Your pull request has been merged successfully. Hover over the tab name `
