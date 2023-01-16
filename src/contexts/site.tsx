@@ -9,7 +9,7 @@ export interface ContextValue {
     readonly path: string;
 };
 
-export function useSite(): ContextValue {
+export const useSite = (): ContextValue => {
     const {
         metadata: {
             editUrl,
@@ -23,5 +23,5 @@ export function useSite(): ContextValue {
         owner: siteOwner,
         repository: siteRepository,
         path: source.replace(`${DOCUSAURUS_ALIASED_SITE_PATH_PREFIX}/`, ''),
-    }
-}
+    };
+};
