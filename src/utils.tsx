@@ -5,22 +5,22 @@ import type {
     LOCAL_STORAGE_KEYS
 } from './docusaurus-theme-editor';
 
-export function useEditorThemeConfig(): EditorThemeConfig {
+export const useEditorThemeConfig = (): EditorThemeConfig => {
     return (
         useDocusaurusContext()
             .siteConfig
             .themeConfig
             .editor
     ) as EditorThemeConfig;
-}
+};
 
-export function getLocalStorageKey(
+export const getLocalStorageKey = (
     {
         owner,
         repository,
         path,
     }: ContextValue,
     key: LOCAL_STORAGE_KEYS,
-): string {
+): string => {
     return `${owner}/${repository}/${path}/${key}`;
 };
