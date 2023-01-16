@@ -13,8 +13,9 @@ const DEFAULT_THEME_CONFIG = {
 // TODO(dnguyen0304): Fix incorrect ThemeConfig type.
 export const ThemeConfigSchema = Joi.object<ThemeConfig>({
     editor: Joi.object({
-        githubAuthorizationRedirectUrl:
-            Joi.string().default(DEFAULT_THEME_CONFIG.githubAuthorizationRedirectUrl),
+        githubAuthorizationRedirectUrl: Joi
+            .string()
+            .default(DEFAULT_THEME_CONFIG.githubAuthorizationRedirectUrl),
     })
         .label('themeConfig.editor')
         .default(DEFAULT_THEME_CONFIG),
