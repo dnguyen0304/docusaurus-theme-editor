@@ -23,7 +23,7 @@ type TabSetter = (
 //   functional updates (unconfirmed requirement).
 // TODO(dnguyen0304): Add markdown and setMarkdown.
 // TODO(dnguyen0304): Add lastUpdatedAt.
-export type EditorTab = {
+export interface EditorTab {
     readonly tabId: number;
     readonly pullTitle: string;
     readonly pullUrl: string;
@@ -33,15 +33,15 @@ export type EditorTab = {
     readonly setPullUrl: TabSetter;
     readonly setPullBranchName: TabSetter;
     readonly setPullStatus: (newValue: GithubPullStatus) => void;
-}
+};
 
-type AddTabProps = {
+interface AddTabProps {
     readonly pullTitle: string;
     readonly pullUrl: string;
     readonly pullBranchName: string;
-}
+};
 
-type ContextValue = {
+interface ContextValue {
     readonly editorIsOpen: boolean;
     readonly activeTabId: number;
     readonly tabs: EditorTab[];
@@ -152,7 +152,7 @@ const useContextValue = (): ContextValue => {
     );
 };
 
-type Props = {
+interface Props {
     readonly children: React.ReactNode;
 };
 
