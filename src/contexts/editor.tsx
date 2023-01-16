@@ -52,7 +52,7 @@ type ContextValue = {
 
 const Context = React.createContext<ContextValue | undefined>(undefined);
 
-function useContextValue(): ContextValue {
+const useContextValue = (): ContextValue => {
     const [editorIsOpen, setEditorIsOpen] = React.useState<boolean>(false);
     const [activeTabId, setActiveTabId] = React.useState<number>(0);
     const [tabs, setTabs] = React.useState<EditorTab[]>([]);
@@ -150,13 +150,13 @@ function useContextValue(): ContextValue {
             setActiveTabId,
         ],
     );
-}
+};
 
 type Props = {
     readonly children: React.ReactNode;
 };
 
-export function EditorProvider({ children }: Props): JSX.Element {
+export const EditorProvider = ({ children }: Props): JSX.Element => {
     const value = useContextValue();
 
     return (
@@ -166,10 +166,10 @@ export function EditorProvider({ children }: Props): JSX.Element {
     );
 };
 
-export function useEditor(): ContextValue {
+export const useEditor = (): ContextValue => {
     const context = React.useContext(Context);
     if (context === undefined) {
         throw new ReactContextError('EditorProvider');
     }
     return context;
-}
+};
