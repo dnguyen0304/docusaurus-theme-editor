@@ -13,26 +13,26 @@ interface ContextValue {
 
 const Context = React.createContext<ContextValue | undefined>(undefined);
 
-function useContextValue(content: RawContent): ContextValue {
+const useContextValue = (content: RawContent): ContextValue => {
     const [rawContent, setRawContent] = React.useState<RawContent>(content);
 
     return React.useMemo(
         () => ({ rawContent, setRawContent }),
         [rawContent, setRawContent],
     );
-}
+};
 
 interface Props {
     readonly rawContent: RawContent;
     readonly children: React.ReactNode;
 };
 
-export function RawContentProvider(
+export const RawContentProvider = (
     {
         rawContent,
         children,
     }: Props
-): JSX.Element {
+): JSX.Element => {
     const value = useContextValue(rawContent);
 
     return (
@@ -42,10 +42,10 @@ export function RawContentProvider(
     );
 };
 
-export function useRawContent(): ContextValue {
+export const useRawContent = (): ContextValue => {
     const context = React.useContext(Context);
     if (context === undefined) {
         throw new ReactContextError('RawContentProvider');
     }
     return context;
-}
+};
