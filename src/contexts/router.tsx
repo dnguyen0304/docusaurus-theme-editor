@@ -5,14 +5,15 @@ type ContextValue = {
     readonly currentPath: string;
 };
 
-export function useLocation(): ContextValue {
+export const useLocation = (): ContextValue => {
     const {
         siteConfig: {
             trailingSlash,
         },
     } = useDocusaurusContext();
     const { pathname } = useDocusaurusLocation();
+
     return {
         currentPath: trailingSlash ? pathname.slice(0, -1) : pathname,
     };
-}
+};
