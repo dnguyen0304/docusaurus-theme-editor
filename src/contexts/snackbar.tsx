@@ -8,24 +8,24 @@ interface ContextValue {
 
 const Context = React.createContext<ContextValue | undefined>(undefined);
 
-function useContextValue(snackbar: SnackbarType): ContextValue {
+const useContextValue = (snackbar: SnackbarType): ContextValue => {
     return React.useMemo(
         () => ({ snackbar }),
         [snackbar],
     );
-}
+};
 
 interface Props {
     readonly snackbar: SnackbarType;
     readonly children: React.ReactNode;
 };
 
-export function SnackbarProvider(
+export const SnackbarProvider = (
     {
         snackbar,
         children,
     }: Props
-): JSX.Element {
+): JSX.Element => {
     const value = useContextValue(snackbar);
 
     return (
@@ -35,10 +35,10 @@ export function SnackbarProvider(
     );
 };
 
-export function useSnackbar(): ContextValue {
+export const useSnackbar = (): ContextValue => {
     const context = React.useContext(Context);
     if (context === undefined) {
         throw new ReactContextError('SnackbarProvider');
     }
     return context;
-}
+};
