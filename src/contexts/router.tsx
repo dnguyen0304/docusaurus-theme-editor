@@ -1,7 +1,7 @@
 import { useLocation as useDocusaurusLocation } from '@docusaurus/router';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
-type ContextValue = {
+interface ContextValue {
     readonly currentPath: string;
 };
 
