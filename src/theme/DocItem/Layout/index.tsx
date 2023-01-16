@@ -1,7 +1,8 @@
 import type { WrapperProps } from '@docusaurus/types';
 import type LayoutType from '@theme-init/DocItem/Layout';
 import Layout from '@theme-init/DocItem/Layout';
-import React from 'react';
+import * as React from 'react';
+
 import {
     LOCAL_STORAGE_KEY_PULL_BRANCH_NAME,
     LOCAL_STORAGE_KEY_PULL_TITLE,
@@ -61,8 +62,6 @@ export default function LayoutWrapper(props: Props): JSX.Element {
     }, []);
 
     return (
-        <>
-            <Layout {...props} />
-        </>
+        <Layout {...props} />
     );
 }
