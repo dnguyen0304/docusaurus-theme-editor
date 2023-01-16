@@ -17,7 +17,7 @@ export const ThemeConfigSchema = Joi.object<ThemeConfig>({
             .string()
             .default(DEFAULT_THEME_CONFIG.githubAuthorizationRedirectUrl),
     })
-        .label('themeConfig.editor')
+        .label('themeConfig.docupotamusEditor')
         .default(DEFAULT_THEME_CONFIG),
 });
 
