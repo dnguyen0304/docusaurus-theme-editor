@@ -1,4 +1,3 @@
-// TODO(dnguyen0304): Fix missing type declarations.
 import { useDoc } from '@docusaurus/theme-common/internal';
 import URI from 'urijs';
 import { DOCUSAURUS_ALIASED_SITE_PATH_PREFIX } from '../constants';
