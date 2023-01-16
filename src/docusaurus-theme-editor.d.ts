@@ -2,16 +2,16 @@
 /// <reference types="@docusaurus/theme-classic" />
 
 declare module '@docusaurus/theme-editor' {
-    type EditorThemeConfig = {
-        githubAuthorizationRedirectUrl: string;
-    };
+    interface EditorThemeConfig {
+        readonly githubAuthorizationRedirectUrl: string;
+    }
 
-    type KeyBinding = {
+    interface KeyBinding {
         readonly key: string;
         readonly friendlyLabel: string;
     }
 
-    type GithubUser = {
+    interface GithubUser {
         readonly username: string;
         readonly emailAddress?: string;
         readonly fullName?: string;
@@ -21,7 +21,7 @@ declare module '@docusaurus/theme-editor' {
     // does not exist.
     type InternalGithubState = 'open' | 'closed' | 'merged';
 
-    type GithubPullStatus = {
+    interface GithubPullStatus {
         readonly state: InternalGithubState;
         // Gotcha: When a pull request is closed, both closedAt and mergedAt are
         // updated. Therefore, mergedAt must be directly checked to determine if a
