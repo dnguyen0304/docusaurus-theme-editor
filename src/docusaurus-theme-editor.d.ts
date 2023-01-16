@@ -17,15 +17,18 @@ declare module '@docusaurus/theme-editor' {
         readonly fullName?: string;
     }
 
-    // TODO(dnguyen0304): Consider adding a null option to represent a pull request
-    // does not exist.
-    type InternalGithubState = 'open' | 'closed' | 'merged';
+    // TODO(dnguyen0304): Consider adding a null option to represent a pull
+    //   request does not exist.
+    type InternalGithubState =
+        | 'open'
+        | 'closed'
+        | 'merged';
 
     interface GithubPullStatus {
         readonly state: InternalGithubState;
         // Gotcha: When a pull request is closed, both closedAt and mergedAt are
-        // updated. Therefore, mergedAt must be directly checked to determine if a
-        // pull request has been merged.
+        // updated. Therefore, mergedAt must be directly checked to determine if
+        // a pull request has been merged.
         readonly closedAt: string | null;
         readonly mergedAt: string | null;
     }
