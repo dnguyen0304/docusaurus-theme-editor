@@ -31,12 +31,12 @@ const Button = (): JSX.Element | null => {
 
 export default function DocBreadcrumbsWrapper(props: Props): JSX.Element {
     const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.up('mobile'));
+    const isLargerThanMobile = useMediaQuery(theme.breakpoints.up('mobile'));
 
     return (
         <nav className={`${styles.breadcrumbsWrapper_container}`}>
             <DocBreadcrumbs {...props} />
-            {isMobile && <Button />}
+            {isLargerThanMobile && <Button />}
         </nav>
     );
 };
