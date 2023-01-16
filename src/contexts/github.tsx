@@ -6,7 +6,7 @@ import type { GithubUser } from '../docusaurus-theme-editor';
 import { useEditorThemeConfig } from '../utils';
 import { ReactContextError } from './errors';
 
-export type ContextValue = {
+export interface ContextValue {
     readonly user?: GithubUser;
     readonly api?: RestEndpointMethods;
     readonly setUser: React.Dispatch<React.SetStateAction<GithubUser | undefined>>;
