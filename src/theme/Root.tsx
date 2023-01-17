@@ -18,9 +18,9 @@ declare module '@mui/material/styles' {
     }
 };
 
-type Props = {
+interface Props {
     readonly children: React.ReactNode;
-}
+};
 
 const COLOR_ACCENT_GREEN: string = '#64ffda';
 const COLOR_GREY_400: string = '#8996a5';
@@ -90,4 +90,4 @@ export default function Root({ children }: Props): JSX.Element {
             </SnackbarProvider>
         </ThemeProvider>
     );
-}
+};
