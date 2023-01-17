@@ -7,9 +7,9 @@ const WIDTH_IDEAL_PX: number = 400;
 const WIDTH_MAX_PERCENT: number = .40;
 const PADDING_PX: number = 16;
 
-type Props = {
+interface Props {
     readonly children: React.ReactNode;
-}
+};
 
 export default function Container({ children }: Props): JSX.Element {
     const [maxWidth, setMaxWidth] = React.useState<number>(WIDTH_IDEAL_PX);
@@ -77,4 +77,4 @@ export default function Container({ children }: Props): JSX.Element {
             </div>
         </Resizable>
     )
-}
+};
