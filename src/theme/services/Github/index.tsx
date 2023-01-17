@@ -15,9 +15,9 @@ import type { ContextValue as GithubContextValue } from '../../../contexts/githu
 import type { ContextValue as SiteContextValue } from '../../../contexts/site';
 
 interface AuthenticateType {
-    user: GithubUser;
-    api: RestEndpointMethods;
-}
+    readonly user: GithubUser;
+    readonly api: RestEndpointMethods;
+};
 
 interface GithubType {
     readonly getUser: () => GithubUser;
@@ -31,7 +31,7 @@ interface GithubType {
     readonly checkPullStatus: (pullUrl: string) => Promise<GithubPullStatus>;
     readonly createPull: (title: string) => Promise<string>;
     readonly closePull: (pullUrl: string) => Promise<void>;
-}
+};
 
 // TODO(dnguyen0304): Extract as a configuration option.
 const APP_CLIENT_ID: string = 'ce971b93f5383248a42b';
