@@ -9,7 +9,7 @@ import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import MuiTooltip, { tooltipClasses, TooltipProps } from '@mui/material/Tooltip';
 import * as React from 'react';
-import { KeyBinding } from '../EditMode/ButtonGroup/DiscardButton';
+import { KeyBinding } from '../ButtonGroup/DiscardButton';
 
 interface Props extends Omit<TooltipProps, 'title'> {
     pullUrl: string;

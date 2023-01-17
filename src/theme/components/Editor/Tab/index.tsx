@@ -9,7 +9,7 @@ import { useLocation } from '../../../../contexts/router';
 import { useSite } from '../../../../contexts/site';
 import { useSnackbar } from '../../../../contexts/snackbar';
 import { getLocalStorageKey } from '../../../../utils';
-import EditModeButtonGroup from '../EditMode/ButtonGroup';
+import ButtonGroup from '../ButtonGroup';
 import EditorLine from '../Line';
 
 type Props = {
@@ -165,7 +165,7 @@ export default function Tab(
                 onChange={handleChange}
                 ref={editorRef}
             />
-            <EditModeButtonGroup
+            <ButtonGroup
                 closeEditor={closeEditor}
                 getMarkdown={getMarkdown}
                 resetMarkdown={resetMarkdown}

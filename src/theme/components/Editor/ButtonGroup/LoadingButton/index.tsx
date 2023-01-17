@@ -2,7 +2,7 @@ import type { ButtonProps } from '@mui/material/Button';
 import Button from '@mui/material/Button';
 import CircularProgress from '@mui/material/CircularProgress';
 import * as React from 'react';
-import { useRefMeasure } from '../../../utils';
+import { useRefMeasure } from '../../utils';
 
 // TODO(dnguyen0304): Get from the theme source of truth.
 const BUTTON_BORDER_WIDTH_PIXELS: number = 1;
