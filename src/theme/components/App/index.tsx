@@ -13,15 +13,15 @@ import { useSnackbar } from '../../../contexts/snackbar';
 
 const WELCOME_WINDOW_SECONDS: number = 10;
 
-function nowSeconds(): number {
+const nowSeconds = (): number => {
     return Math.floor(Date.now() / 1000);
-}
+};
 
-function setCookieWithFallback(
+const setCookieWithFallback = (
     name: string,
     value: any,
     options?: CookieSetOptions | undefined,
-): void {
+): void => {
     // Set the cookie twice. First without options and second with them.
     // This fallback is necessary for hosting providers such as AWS S3 that
     // do not support cookie attributes (reproduced but no source
@@ -80,4 +80,4 @@ export default function App(): JSX.Element | null {
     }, []);
 
     return null;
-}
+};
