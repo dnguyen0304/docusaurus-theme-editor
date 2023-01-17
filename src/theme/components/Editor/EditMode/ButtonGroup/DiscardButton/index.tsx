@@ -9,7 +9,7 @@ import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import * as React from 'react';
 import { useHotkeys } from 'react-hotkeys-hook';
-import Transition from '../../../../components/Transition';
+import Transition from '../../../../../components/Transition';
 import StyledDialog from '../Dialog';
 import SplitButton from './SplitButton';
 

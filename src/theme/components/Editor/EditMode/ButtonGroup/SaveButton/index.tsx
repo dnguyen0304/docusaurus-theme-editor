@@ -10,7 +10,7 @@ import Tooltip from '@mui/material/Tooltip';
 import draft from 'draft-js';
 import * as React from 'react';
 import { useHotkeys } from 'react-hotkeys-hook';
-import { useSnackbar } from '../../../../../contexts/snackbar';
+import { useSnackbar } from '../../../../../../contexts/snackbar';
 
 const TOOLTIP_DISABLED_TEXT: string =
     `Your pull request has been merged successfully. Hover over the tab name `
