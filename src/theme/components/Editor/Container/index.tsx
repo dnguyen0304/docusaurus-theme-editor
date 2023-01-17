@@ -1,6 +1,6 @@
 import { Resizable } from 're-resizable';
 import * as React from 'react';
-import EditorHandle, { WIDTH_PX as HANDLE_WIDTH_PX } from '../Handle';
+import EditorHandle, { WIDTH_PX as HANDLE_WIDTH_PX } from './Handle';
 import styles from './styles.module.css';
 
 const WIDTH_IDEAL_PX: number = 400;
