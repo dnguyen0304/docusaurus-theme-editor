@@ -149,7 +149,7 @@ const authenticate = async (
         },
         api,
     };
-}
+};
 
 const convertToInternalState = (
     state: 'open' | 'closed',
@@ -229,7 +229,7 @@ export default function Github(
         });
 
         return sha;
-    }
+    };
 
     const getUser = (): GithubUser => {
         return user;
@@ -275,7 +275,7 @@ export default function Github(
         }
 
         _branchName = name;
-    }
+    };
 
     const createCommit = async (
         content: string,
@@ -317,7 +317,7 @@ export default function Github(
             } else {
                 throw error;
             }
-        }
+        };
 
         commitExists = true;
     };
@@ -343,7 +343,9 @@ export default function Github(
         return html_url;
     };
 
-    const checkPullStatus = async (pullUrl: string): Promise<GithubPullStatus> => {
+    const checkPullStatus = async (
+        pullUrl: string,
+    ): Promise<GithubPullStatus> => {
         const pullId = new URI(pullUrl).filename();
 
         if (pullId === '') {
@@ -392,4 +394,4 @@ export default function Github(
         checkPullStatus,
         closePull,
     };
-}
+};
