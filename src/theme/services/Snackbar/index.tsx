@@ -1,30 +1,29 @@
 // TODO(dnguyen0304): Investigate why moving this module to src/services
 // throws "ReferenceError: exports is not defined".
 
-// Copied from:
-// https://mui.com/material-ui/react-snackbar/#customization
-
 import MuiAlert, { AlertColor, AlertProps } from '@mui/material/Alert';
 import MuiSnackbar from '@mui/material/Snackbar';
 import * as React from 'react';
 
 export interface SnackbarType {
-    create: () => JSX.Element;
-    sendAlert: (
+    readonly create: () => JSX.Element;
+    readonly sendAlert: (
         severity: AlertColor,
         content: React.ReactNode,
         durationUpdater: (prev: number) => number,
     ) => void;
-    sendSuccessAlert: (
+    readonly sendSuccessAlert: (
         content: React.ReactNode,
         durationUpdater?: (prev: number) => number,
     ) => void;
-    sendWarningAlert: (
+    readonly sendWarningAlert: (
         content: React.ReactNode,
         durationUpdater?: (prev: number) => number,
     ) => void;
-}
+};
 
+// Copied from:
+// https://mui.com/material-ui/react-snackbar/#customization
 const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
     props: AlertProps,
     ref: React.Ref<HTMLDivElement>,
@@ -98,12 +97,14 @@ export default function Snackbar(): SnackbarType {
         );
         setDuration(previousDuration);
     };
+
     const sendSuccessAlert = (
         content: React.ReactNode,
         durationUpdater: (prev: number) => number = noOpUpdater,
     ) => {
         sendAlert('success', content, durationUpdater);
     };
+
     const sendWarningAlert = (
         content: React.ReactNode,
         durationUpdater: (prev: number) => number = noOpUpdater,
@@ -121,4 +122,4 @@ export default function Snackbar(): SnackbarType {
         sendSuccessAlert: sendSuccessAlert,
         sendWarningAlert: sendWarningAlert,
     };
-}
+};
