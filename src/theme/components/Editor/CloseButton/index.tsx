@@ -6,7 +6,7 @@ import Tooltip from '@mui/material/Tooltip';
 import * as React from 'react';
 import { useHotkeys } from 'react-hotkeys-hook';
 
-export const CloseButtonKeyBinding: KeyBinding = {
+const CloseButtonKeyBinding: KeyBinding = {
     key: 'escape',
     friendlyLabel: 'esc',
 };

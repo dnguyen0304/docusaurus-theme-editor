@@ -5,7 +5,7 @@ import Tooltip from '@mui/material/Tooltip';
 import * as React from 'react';
 import { useHotkeys } from 'react-hotkeys-hook';
 
-export const EditButtonKeyBinding: KeyBinding = {
+const EditButtonKeyBinding: KeyBinding = {
     key: 'e',
     friendlyLabel: 'e',
 };
