@@ -6,10 +6,6 @@ import Tooltip from '@mui/material/Tooltip';
 import * as React from 'react';
 import { useHotkeys } from 'react-hotkeys-hook';
 
-interface Props {
-    readonly toggleEditorIsOpen: () => void;
-}
-
 export const CloseButtonKeyBinding: KeyBinding = {
     key: 'escape',
     friendlyLabel: 'esc',
@@ -20,7 +16,11 @@ const COLOR_GREY_400: string = '#8996a5';
 
 const StyledButton = styled(Button)({
     color: COLOR_GREY_400,
-})
+});
+
+interface Props {
+    readonly toggleEditorIsOpen: () => void;
+};
 
 export default function CloseButton(
     {

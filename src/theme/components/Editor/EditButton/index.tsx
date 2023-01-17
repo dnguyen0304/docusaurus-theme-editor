@@ -5,13 +5,13 @@ import Tooltip from '@mui/material/Tooltip';
 import * as React from 'react';
 import { useHotkeys } from 'react-hotkeys-hook';
 
-interface Props {
-    readonly onClick: () => void;
-}
-
 export const EditButtonKeyBinding: KeyBinding = {
     key: 'e',
     friendlyLabel: 'e',
+};
+
+interface Props {
+    readonly onClick: () => void;
 };
 
 export default function EditButton({ onClick }: Props): JSX.Element {
