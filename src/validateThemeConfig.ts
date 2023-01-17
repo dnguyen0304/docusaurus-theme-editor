@@ -5,7 +5,7 @@ import type {
 import { Joi } from '@docusaurus/utils-validation';
 
 const DEFAULT_THEME_CONFIG = {
-    // TODO(dnguyen0304): Extract as a config setting.
+    // TODO(dnguyen0304): Extract as a configuration setting.
     githubAuthorizationRedirectUrl: 'https://kgevadn5a2.execute-api.us-east-1.amazonaws.com/production/DocusaurusEditor_handleOAuthRedirect',
 };
 
