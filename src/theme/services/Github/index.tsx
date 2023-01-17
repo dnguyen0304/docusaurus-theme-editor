@@ -14,6 +14,13 @@ import { COOKIE_KEY_SESSION_ID } from '../../../constants';
 import type { ContextValue as GithubContextValue } from '../../../contexts/github';
 import type { ContextValue as SiteContextValue } from '../../../contexts/site';
 
+// TODO(dnguyen0304): Extract as a configuration setting.
+const APP_CLIENT_ID: string = 'ce971b93f5383248a42b';
+const GITHUB_AUTHORIZATION_CODE_URL: string =
+    'https://github.com/login/oauth/authorize';
+const GITHUB_AUTHORIZATION_SCOPES: string = ['repo'].join(' ');
+const GITHUB_REF_PREFIX = 'refs/heads/';
+
 interface AuthenticateType {
     readonly user: GithubUser;
     readonly api: RestEndpointMethods;
@@ -32,13 +39,6 @@ interface GithubType {
     readonly createPull: (title: string) => Promise<string>;
     readonly closePull: (pullUrl: string) => Promise<void>;
 };
-
-// TODO(dnguyen0304): Extract as a configuration option.
-const APP_CLIENT_ID: string = 'ce971b93f5383248a42b';
-const GITHUB_AUTHORIZATION_CODE_URL: string =
-    'https://github.com/login/oauth/authorize';
-const GITHUB_AUTHORIZATION_SCOPES: string = ['repo'].join(' ');
-const GITHUB_REF_PREFIX = 'refs/heads/';
 
 export const initializeAuth = async (
     githubContext: GithubContextValue,
