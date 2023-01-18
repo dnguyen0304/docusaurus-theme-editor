@@ -1,5 +1,10 @@
 /// <reference types="@docusaurus/theme-classic" />
 
+declare module '@docusaurus/theme-common/internal' {
+    // See: https://github.com/facebook/docusaurus/blob/v2.2.0/packages/docusaurus-theme-common/src/contexts/doc.tsx#L65
+    function useDoc(): any;
+}
+
 declare module '@docusaurus/theme-editor' {
     interface EditorThemeConfig {
         readonly githubAuthorizationRedirectUrl: string;

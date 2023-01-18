@@ -5,7 +5,6 @@
     "main": "lib/index.js",
     "types": "src/docusaurus-theme-editor.d.ts",
     "dependencies": {
-        "@docusaurus/theme-common": "^2.2.x",
         "@docusaurus/utils-validation": "^2.2.x",
         "@emotion/react": "^11.9.3",
         "@emotion/styled": "^11.9.3",
