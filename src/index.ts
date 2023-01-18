@@ -5,9 +5,15 @@ export default function themeEditor(): Plugin<undefined> {
         name: 'docusaurus-theme-editor',
 
         getThemePath() {
-            return './theme';
+            return '../lib/theme';
+        },
+
+        getTypeScriptThemePath() {
+            return '../src/theme';
         },
     };
-}
+};
 
 export { validateThemeConfig } from './validateThemeConfig';
+
+export const getSwizzleComponentList = (): string[] => [];
