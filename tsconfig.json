@@ -28,6 +28,7 @@
         /* Modules */
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
         "baseUrl": ".",
         /* Plugins */
         "plugins": [
