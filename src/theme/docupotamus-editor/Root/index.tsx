@@ -1,10 +1,10 @@
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import React from 'react';
-import { EditorProvider } from '../contexts/editor';
-import { GithubProvider } from '../contexts/github';
-import { SnackbarProvider } from '../contexts/snackbar';
-import App from '../theme/docupotamus-editor/components/App';
-import Snackbar from '../theme/services/Snackbar';
+import { EditorProvider } from '../../../contexts/editor';
+import { GithubProvider } from '../../../contexts/github';
+import { SnackbarProvider } from '../../../contexts/snackbar';
+import App from '../../../theme/docupotamus-editor/components/App';
+import Snackbar from '../../../theme/services/Snackbar';
 import './styles.css';
 
 declare module '@mui/material/styles' {
