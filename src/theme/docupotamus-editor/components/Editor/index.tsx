@@ -8,7 +8,7 @@ import type { Theme } from '@mui/material/styles';
 import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import * as React from 'react';
-import { useEditor } from '../../../contexts/editor';
+import { useEditor } from '../../../../contexts/editor';
 import EditorContainer from './Container';
 import EditorTab from './Tab';
 import EditorTooltip from './Tooltip';

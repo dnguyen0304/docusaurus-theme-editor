@@ -17,12 +17,12 @@ import { RequestError } from '@octokit/request-error';
 import draft from 'draft-js';
 import * as React from 'react';
 import { useHotkeys } from 'react-hotkeys-hook';
-import { useEditor } from '../../../../../contexts/editor';
-import { useGithub } from '../../../../../contexts/github';
-import { useSite } from '../../../../../contexts/site';
-import { useSnackbar } from '../../../../../contexts/snackbar';
-import Transition from '../../../../docupotamus-editor/Transition';
-import { initializeAuth } from '../../../../services/Github';
+import { useEditor } from '../../../../../../contexts/editor';
+import { useGithub } from '../../../../../../contexts/github';
+import { useSite } from '../../../../../../contexts/site';
+import { useSnackbar } from '../../../../../../contexts/snackbar';
+import { initializeAuth } from '../../../../../services/Github';
+import Transition from '../../../../components/Transition';
 import BaseStyledDialog from '../Dialog';
 import LoadingButton from '../LoadingButton';
 

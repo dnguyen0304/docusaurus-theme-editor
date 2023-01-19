@@ -10,11 +10,11 @@ import Popper from '@mui/material/Popper';
 import { styled } from '@mui/material/styles';
 import Tooltip from '@mui/material/Tooltip';
 import * as React from 'react';
-import { useEditor } from '../../../../../../contexts/editor';
-import { useGithub } from '../../../../../../contexts/github';
-import { useSite } from '../../../../../../contexts/site';
-import { useSnackbar } from '../../../../../../contexts/snackbar';
-import { initializeAuth } from '../../../../../services/Github';
+import { useEditor } from '../../../../../../../contexts/editor';
+import { useGithub } from '../../../../../../../contexts/github';
+import { useSite } from '../../../../../../../contexts/site';
+import { useSnackbar } from '../../../../../../../contexts/snackbar';
+import { initializeAuth } from '../../../../../../services/Github';
 import LoadingButton from '../../LoadingButton';
 
 const TOOLTIP_TEXT: JSX.Element = (

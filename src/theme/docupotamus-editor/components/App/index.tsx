@@ -8,8 +8,8 @@ import {
     COOKIE_KEY_SESSION_ID,
     SEARCH_PARAM_KEY_AUTH,
     SEARCH_PARAM_KEY_LOGGED_IN_AT
-} from '../../../constants';
-import { useSnackbar } from '../../../contexts/snackbar';
+} from '../../../../constants';
+import { useSnackbar } from '../../../../contexts/snackbar';
 
 const WELCOME_WINDOW_SECONDS: number = 10;
 
