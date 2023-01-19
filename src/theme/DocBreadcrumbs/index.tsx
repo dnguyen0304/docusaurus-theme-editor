@@ -7,8 +7,8 @@ import * as React from 'react';
 import { useEditor } from '../../contexts/editor';
 import { useRawContent } from '../../contexts/rawContent';
 import { useLocation } from '../../contexts/router';
-import CloseButton from '../components/CloseButton';
-import EditButton from '../components/EditButton';
+import CloseButton from '../docupotamus-editor/CloseButton';
+import EditButton from '../docupotamus-editor/EditButton';
 import styles from './styles.module.css';
 
 type Props = WrapperProps<typeof DocBreadcrumbsType>;

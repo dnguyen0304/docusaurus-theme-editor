@@ -3,7 +3,7 @@ import Desktop from '@theme-init/DocItem/TOC/Desktop';
 import type DesktopType from '@theme/DocItem/TOC/Desktop';
 import * as React from 'react';
 import { useEditor } from '../../../../contexts/editor';
-import Editor from '../../../components/Editor';
+import Editor from '../../../docupotamus-editor/Editor';
 
 type Props = WrapperProps<typeof DesktopType>;
 

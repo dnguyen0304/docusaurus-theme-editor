@@ -21,7 +21,7 @@ import { useEditor } from '../../../../../contexts/editor';
 import { useGithub } from '../../../../../contexts/github';
 import { useSite } from '../../../../../contexts/site';
 import { useSnackbar } from '../../../../../contexts/snackbar';
-import Transition from '../../../../components/Transition';
+import Transition from '../../../../docupotamus-editor/Transition';
 import { initializeAuth } from '../../../../services/Github';
 import BaseStyledDialog from '../Dialog';
 import LoadingButton from '../LoadingButton';
