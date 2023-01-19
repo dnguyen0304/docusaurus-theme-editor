@@ -1,7 +1,7 @@
 import type { WrapperProps } from '@docusaurus/types';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import DocBreadcrumbs from '@theme-init/DocBreadcrumbs';
+import DocBreadcrumbs from '@theme-original/DocBreadcrumbs';
 import type DocBreadcrumbsType from '@theme/DocBreadcrumbs';
 import * as React from 'react';
 import { useEditor } from '../../../contexts/editor';

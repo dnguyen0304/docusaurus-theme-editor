@@ -1,5 +1,5 @@
 import type { WrapperProps } from '@docusaurus/types';
-import Layout from '@theme-init/DocItem/Layout';
+import Layout from '@theme-original/DocItem/Layout';
 import type LayoutType from '@theme/DocItem/Layout';
 import * as React from 'react';
 import {
