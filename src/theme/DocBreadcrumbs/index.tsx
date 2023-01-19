@@ -5,7 +5,7 @@ import * as React from 'react';
 import { useEditorThemeConfig } from '../../utils';
 import DocBreadcrumbsSwizzle from '../docupotamus-editor/DocBreadcrumbs';
 
-type Props = WrapperProps<typeof DocBreadcrumbsType>;
+type Props = Readonly<WrapperProps<typeof DocBreadcrumbsType>>;
 
 export default function DocBreadcrumbsWrapper(props: Props): JSX.Element {
     const { swizzleIsEnabled } = useEditorThemeConfig();

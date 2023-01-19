@@ -5,7 +5,7 @@ import * as React from 'react';
 import { useEditorThemeConfig } from '../../utils';
 import RootSwizzle from '../docupotamus-editor/Root';
 
-type Props = WrapperProps<typeof RootType>;
+type Props = Readonly<WrapperProps<typeof RootType>>;
 
 export default function RootWrapper(props: Props): JSX.Element {
     const { swizzleIsEnabled } = useEditorThemeConfig();

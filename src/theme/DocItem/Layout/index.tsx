@@ -5,7 +5,7 @@ import * as React from 'react';
 import { useEditorThemeConfig } from '../../../utils';
 import LayoutSwizzle from '../../docupotamus-editor/DocItem/Layout';
 
-type Props = WrapperProps<typeof LayoutType>;
+type Props = Readonly<WrapperProps<typeof LayoutType>>;
 
 export default function LayoutWrapper(props: Props): JSX.Element {
     const { swizzleIsEnabled } = useEditorThemeConfig();

@@ -5,7 +5,7 @@ import * as React from 'react';
 import { useEditorThemeConfig } from '../../utils';
 import DocPageSwizzle from '../docupotamus-editor/DocPage';
 
-type Props = WrapperProps<typeof DocPageType>;
+type Props = Readonly<WrapperProps<typeof DocPageType>>;
 
 export default function DocPageWrapper(props: Props): JSX.Element {
     const { swizzleIsEnabled } = useEditorThemeConfig();
