@@ -8,6 +8,7 @@ declare module '@docusaurus/theme-common/internal' {
 declare module '@docusaurus/theme-editor' {
     interface EditorThemeConfig {
         readonly githubAuthorizationRedirectUrl: string;
+        readonly swizzleIsEnabled: boolean;
     }
 
     interface KeyBinding {
