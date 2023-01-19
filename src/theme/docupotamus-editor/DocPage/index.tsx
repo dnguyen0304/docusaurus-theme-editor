@@ -1,12 +1,13 @@
 import type { WrapperProps } from '@docusaurus/types';
-import type DocPageType from '@theme-init/DocPage';
 import DocPage from '@theme-init/DocPage';
+import type DocPageType from '@theme/DocPage';
 import * as React from 'react';
-import { RawContentProvider } from '../../contexts/rawContent';
+import { RawContentProvider } from '../../../contexts/rawContent';
 
 type Props = WrapperProps<typeof DocPageType>;
 
 export default function DocPageWrapper(props: Props): JSX.Element {
+    // TODO(dnguyen0304): Fix type declaration.
     const { rawContent } = props;
 
     return (

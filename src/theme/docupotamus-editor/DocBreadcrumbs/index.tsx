@@ -4,11 +4,11 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import DocBreadcrumbs from '@theme-init/DocBreadcrumbs';
 import type DocBreadcrumbsType from '@theme/DocBreadcrumbs';
 import * as React from 'react';
-import { useEditor } from '../../contexts/editor';
-import { useRawContent } from '../../contexts/rawContent';
-import { useLocation } from '../../contexts/router';
-import CloseButton from '../docupotamus-editor/components/CloseButton';
-import EditButton from '../docupotamus-editor/components/EditButton';
+import { useEditor } from '../../../contexts/editor';
+import { useRawContent } from '../../../contexts/rawContent';
+import { useLocation } from '../../../contexts/router';
+import CloseButton from '../../docupotamus-editor/components/CloseButton';
+import EditButton from '../../docupotamus-editor/components/EditButton';
 import styles from './styles.module.css';
 
 type Props = WrapperProps<typeof DocBreadcrumbsType>;
