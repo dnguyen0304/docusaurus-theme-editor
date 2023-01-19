@@ -1,5 +1,5 @@
 // If you need the DocItem-specific ("page-specific") root, use
-// theme/DocItem/Layout.
+// theme/docupotamus-editor/DocItem/Layout.
 
 import * as React from 'react';
 import Cookies, { CookieSetOptions } from 'universal-cookie';

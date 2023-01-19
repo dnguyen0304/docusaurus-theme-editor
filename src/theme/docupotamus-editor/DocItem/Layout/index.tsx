@@ -6,10 +6,10 @@ import {
     LOCAL_STORAGE_KEY_PULL_BRANCH_NAME,
     LOCAL_STORAGE_KEY_PULL_TITLE,
     LOCAL_STORAGE_KEY_PULL_URL
-} from '../../../constants';
-import { useEditor } from '../../../contexts/editor';
-import { useSite } from '../../../contexts/site';
-import { getLocalStorageKey } from '../../../utils';
+} from '../../../../constants';
+import { useEditor } from '../../../../contexts/editor';
+import { useSite } from '../../../../contexts/site';
+import { getLocalStorageKey } from '../../../../utils';
 
 type Props = WrapperProps<typeof LayoutType>;
 
