@@ -1,5 +1,5 @@
 import type { WrapperProps } from '@docusaurus/types';
-import DocPage from '@theme-original/DocPage';
+import DocPage from '@theme-init/DocPage';
 import type DocPageType from '@theme/DocPage';
 import * as React from 'react';
 import { RawContentProvider } from '../../../contexts/rawContent';
