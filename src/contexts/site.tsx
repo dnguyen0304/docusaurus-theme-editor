@@ -1,6 +1,6 @@
-import { useDoc } from '@docusaurus/theme-common/internal';
 import URI from 'urijs';
 import { DOCUSAURUS_ALIASED_SITE_PATH_PREFIX } from '../constants';
+import { useDocMetadata } from './docMetadata';
 
 export interface ContextValue {
     readonly owner: string;
@@ -9,14 +9,9 @@ export interface ContextValue {
 };
 
 export const useSite = (): ContextValue => {
-    const {
-        metadata: {
-            editUrl,
-            source,
-        },
-    } = useDoc();
+    const { editUrl, source } = useDocMetadata();
 
-    const [siteOwner, siteRepository] = new URI(editUrl).segment();
+    const [siteOwner, siteRepository] = new URI(editUrl ?? '').segment();
 
     return {
         owner: siteOwner,

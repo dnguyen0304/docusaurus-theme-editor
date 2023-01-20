@@ -1,3 +1,4 @@
+import { useDoc } from '@docusaurus/theme-common/internal';
 import type { WrapperProps } from '@docusaurus/types';
 import Layout from '@theme-init/DocItem/Layout';
 import type LayoutType from '@theme/DocItem/Layout';
@@ -7,6 +8,7 @@ import {
     LOCAL_STORAGE_KEY_PULL_TITLE,
     LOCAL_STORAGE_KEY_PULL_URL
 } from '../../../../constants';
+import { useDocMetadata } from '../../../../contexts/docMetadata';
 import { useEditor } from '../../../../contexts/editor';
 import { useSite } from '../../../../contexts/site';
 import { getLocalStorageKey } from '../../../../utils';
@@ -18,7 +20,20 @@ export default function LayoutWrapper(props: Props): JSX.Element {
         tabs,
         addTab,
     } = useEditor();
+    // TODO(dnguyen0304): Add custom hook for increasing context scope.
+    const { setEditUrl, setSource } = useDocMetadata();
+    const {
+        metadata: {
+            editUrl,
+            source,
+        },
+    } = useDoc();
     const siteContext = useSite();
+
+    React.useEffect(() => {
+        setEditUrl(editUrl);
+        setSource(source);
+    }, [editUrl, source]);
 
     React.useEffect(() => {
         const pullTitle =
